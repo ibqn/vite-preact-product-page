@@ -42,7 +42,7 @@ const Header = () => {
               <span className="text-lg">tips</span>
             </h1>
             <p className="uppercase text-3xl font-semibold">green tea</p>
-            <img className="w-full" src="images/tea-bag-3.png" alt="Tea Bag" />
+            <img className="w-full" src="images/tea-bag.png" alt="Tea Bag" />
           </div>
 
           <div class="flex mt-20 flex-col items-end gap-40 justify-center">
