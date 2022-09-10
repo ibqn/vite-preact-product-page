@@ -4,7 +4,7 @@ const Header = () => {
       <div className="row-start-1 col-start-1 col-end-2 bg-[#f9d1cf]"></div>
       <div className="row-start-1 col-start-2 col-end-3 bg-[#7ad592]"></div>
       <div className="row-start-1 col-start-1 col-end-3">
-        <div className="container mx-auto grid grid-cols-3 gap-x-6 py-24">
+        <div className="container px-8 mx-auto grid grid-cols-3 gap-x-6 py-24">
           <div className="flex flex-col justify-center">
             <h2 className="font-semibold text-xl uppercase mb-4">
               Now Taking online orders

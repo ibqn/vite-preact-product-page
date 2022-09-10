@@ -5,9 +5,8 @@ const Navbar = () => {
 
   return (
     <div className="absolute top-0 left-0 w-full py-8">
-      <div className="container mx-auto">
+      <div className="container px-8 mx-auto">
         <nav className="flex justify-between items-center">
-          {/* <nav className="grid grid-cols-[auto_1fr_auto] gap-x-6 items-center"> */}
           <div className="text-2xl font-extrabold">
             <a href="/" className="relative">
               <span className="uppercase">p</span>
