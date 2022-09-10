@@ -1,4 +1,8 @@
+import { header } from "../data";
+
 const Header = () => {
+  const { advantages } = header;
+
   return (
     <header className="grid grid-cols-2 min-h-screen bg-amber-200">
       <div className="row-start-1 col-start-1 col-end-2 bg-[#f9d1cf]"></div>
@@ -46,20 +50,27 @@ const Header = () => {
           </div>
 
           <div class="flex mt-20 flex-col items-end gap-40 justify-center">
-            <div class="relative w-[148px] pt-4 pb-6 px-4 leading-normal text-[#0d5958] bg-[#ffed8e] rounded-xl shadow-one z-50 hover:scale-110 transition-all">
-              <div class="absolute -top-[30px] left-0 h-20 w-[148px] transform skew-y-[155deg] rounded-tl-xl rounded-tr-3xl -z-10 bg-[#ffed8e] shadow-two"></div>
-              <div class="absolute -top-10 right-4 font-bold text-sm">01</div>
-              <p class="uppercase text-sm font-bold mb-3">ingredients</p>
-              <h2 class="text-[24px] font-bold leading-[.8]">100%</h2>
-              <h4 class="text-[18px] lowercase font-semibold">organic</h4>
-            </div>
-            <div class="relative w-[148px] pt-4 pb-6 px-4 leading-normal text-[#0d5958] bg-[#ffed8e] rounded-xl shadow-one z-50 hover:scale-110 transition-all">
-              <div class="absolute -top-[30px] left-0 h-20 w-[148px] transform skew-y-[155deg] rounded-tl-xl rounded-tr-3xl -z-10 bg-[#ffed8e] shadow-two"></div>
-              <div class="absolute -top-10 right-4 font-bold text-sm">02</div>
-              <p class="uppercase text-sm font-bold mb-3">flavors</p>
-              <h2 class="text-[24px] font-bold leading-[.8]">9</h2>
-              <h4 class="text-[18px] lowercase font-semibold">variants</h4>
-            </div>
+            {advantages.map((item, index) => {
+              const { title, parameter, value } = item;
+              const count = `0${index + 1}`.slice(-2);
+
+              return (
+                <div
+                  key={index}
+                  class="relative w-[148px] pt-4 pb-6 px-4 leading-normal text-[#0d5958] bg-[#ffed8e] rounded-xl shadow-one z-50 hover:scale-110 transition-all"
+                >
+                  <div class="absolute -top-[30px] left-0 h-20 w-[148px] transform skew-y-[155deg] rounded-tl-xl rounded-tr-3xl -z-10 bg-[#ffed8e] shadow-two"></div>
+                  <div class="absolute -top-10 right-4 font-bold text-sm">
+                    {count}
+                  </div>
+                  <p class="uppercase text-sm font-bold mb-3">{title}</p>
+                  <h2 class="text-[24px] font-bold leading-[.8]">{value}</h2>
+                  <h4 class="text-[18px] lowercase font-semibold">
+                    {parameter}
+                  </h4>
+                </div>
+              );
+            })}
           </div>
         </div>
       </div>

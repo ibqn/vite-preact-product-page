@@ -27,3 +27,10 @@ export const navbar = {
     },
   ],
 };
+
+export const header = {
+  advantages: [
+    { title: "ingredients", parameter: "organic", value: "100%" },
+    { title: "flavors", parameter: "variants", value: "9" },
+  ],
+};
